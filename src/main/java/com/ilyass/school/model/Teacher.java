@@ -1,8 +1,8 @@
 package com.ilyass.school.model;
 
-import java.io.Serializable;
 
-public class Teacher implements Serializable{
+
+public class Teacher {
 
 	private static final long serialVersionUID = 1L;
 	private int id;
@@ -59,6 +59,32 @@ public class Teacher implements Serializable{
 		return serialVersionUID;
 	}
 	
+	protected Teacher() {
+
+	}
+	
+	public Teacher(int id, String firstName, String lastName, String subject, String email, String username,
+			String password) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.subject = subject;
+		this.email = email;
+		this.username = username;
+		this.password = password;
+	}
+	
+	public Teacher(String firstName, String lastName, String subject, String email, String username, String password) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.subject = subject;
+		this.email = email;
+		this.username = username;
+		this.password = password;
+	}
 	
 	
-}
+	
+}     
