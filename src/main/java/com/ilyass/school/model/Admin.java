@@ -7,6 +7,8 @@ public class Admin implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private int id;
+	private String firstName;
+	private String lastName;
 	private String username;
 	private String password;
 	
@@ -31,6 +33,20 @@ public class Admin implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	
 	
 	
 }
