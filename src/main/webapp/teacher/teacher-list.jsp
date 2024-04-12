@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-    <title>User Management Application</title>
+    <title>School Management Application</title>
 
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -13,7 +13,7 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #007F73;">
         <div>
-            <a href="https://www.javaguides.net" class="navbar-brand">School Management POC</a>
+            <a href="#" class="navbar-brand">School Management POC</a>
         </div>
 
         <ul class="navbar-nav">
