@@ -55,7 +55,7 @@
                         <td>
                             <a href="edit?id=<c:out value='${teacher.id}' />" class="btn btn-warning" style="background-color: #FFC700; border-color: #007F73; color: #007F73;">Edit</a>
 							&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="delete?id=<c:out value='${teacher.id}' />" class="btn btn-danger" style="background-color: #FFC700; border-color: #007F73; color: #007F73;">Delete</a>
+							<a href="delete?id=<c:out value='${teacher.id}' />" class="btn btn-danger" style="background-color: #FFF455; border-color: #007F73; color: #007F73;">Delete</a>
 
                         </td>
                     </tr>
