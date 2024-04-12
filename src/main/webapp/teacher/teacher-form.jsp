@@ -14,7 +14,7 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #007F73;">
         <div>
-            <a href="https://www.javaguides.net" class="navbar-brand">School Management POC</a>
+            <a href="#" class="navbar-brand">School Management POC</a>
         </div>
 
         <ul class="navbar-nav">
@@ -26,8 +26,8 @@
         </ul>
     </nav>
 </header>
-<div class="container col-md-5">
-    <div class="card">
+<div class="container col-md-5" >
+    <div class="card" style="background-color: #FFF455;">
         <div class="card-body">
             <c:if test="${teacher != null}">
                 <form action="update" method="post">
@@ -37,7 +37,7 @@
             </c:if>
 
             <caption>
-                <h2>
+                <h2 style="color: #007F73;">
                     <c:if test="${teacher != null}">
                         Edit Teacher
                     </c:if>
@@ -52,40 +52,42 @@
             </c:if>
 
             <fieldset class="form-group">
-                <label>First Name</label>
+                <label style="color: #007F73;">First Name</label>
                 <input type="text" value="<c:out value='${teacher.firstName}' />" class="form-control" name="firstName" required="required" minlength="2">
             </fieldset>
 
             <fieldset class="form-group">
-                <label>Last Name</label>
+                <label style="color: #007F73;">Last Name</label>
                 <input type="text" value="<c:out value='${teacher.lastName}' />" class="form-control" name="lastName" required="required" minlength="2">
             </fieldset>
 
             <fieldset class="form-group">
-                <label>Subject</label>
+                <label style="color: #007F73;">Subject</label>
                 <input type="text" value="<c:out value='${teacher.subject}' />" class="form-control" name="subject" required="required">
             </fieldset>
 
             <fieldset class="form-group">
-                <label>Email</label>
+                <label style="color: #007F73;">Email</label>
                 <input type="email" value="<c:out value='${teacher.email}' />" class="form-control" name="email" required="required">
             </fieldset>
 
             <fieldset class="form-group">
-                <label>Username</label>
+                <label style="color: #007F73;">Username</label>
                 <input type="text" value="<c:out value='${teacher.username}' />" class="form-control" name="username" required="required">
             </fieldset>
 
             <fieldset class="form-group">
-                <label>Password</label>
+                <label style="color: #007F73;">Password</label>
                 <input type="password" value="<c:out value='${teacher.password}' />" class="form-control" name="password" required="required">
             </fieldset>
 
-            <button type="submit" class="btn btn-success">Save</button>
+             <button type="submit" class="btn btn-success" style="background-color: #4CCD99; border-color: #007F73; color: #007F73; display: flex; justify-content: center; align-items: center;">Save</button>
+
             </form>
         </div>
     </div>
 </div>
+
 
 <jsp:include page="../common/footer.jsp"></jsp:include>
 </body>
