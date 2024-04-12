@@ -12,13 +12,13 @@ import com.ilyass.school.utils.JDBCUtils;
 
 public class TeacherDaoImpl implements TeacherDao {
 
-	private static final String INSERT_TEACHER_SQL = "INSERT INTO teachers" +
-	        "  (first_name, last_name, subject, email, username, password) VALUES " + " (?, ?, ?, ?, ?, ?);";
+	private static final String INSERT_TEACHER_SQL = "INSERT INTO teacher" +
+	        "  (firsName, lastName, subject, email, username, password) VALUES " + " (?, ?, ?, ?, ?, ?);";
 
-	    private static final String SELECT_TEACHER_BY_ID = "SELECT * FROM teachers WHERE id = ?";
-	    private static final String SELECT_ALL_TEACHERS = "SELECT * FROM teachers";
-	    private static final String DELETE_TEACHER_BY_ID = "DELETE FROM teachers WHERE id = ?";
-	    private static final String UPDATE_TEACHER = "UPDATE teachers SET first_name = ?, last_name = ?, subject = ?, email = ?, username = ?, password = ? WHERE id = ?";
+	    private static final String SELECT_TEACHER_BY_ID = "SELECT * FROM teacher WHERE id = ?";
+	    private static final String SELECT_ALL_TEACHERS = "SELECT * FROM teacher";
+	    private static final String DELETE_TEACHER_BY_ID = "DELETE FROM teacher WHERE id = ?";
+	    private static final String UPDATE_TEACHER = "UPDATE teacher SET firstName = ?, lastName = ?, subject = ?, email = ?, username = ?, password = ? WHERE id = ?";
 
 	    public TeacherDaoImpl() {
 	    }
@@ -50,8 +50,8 @@ public class TeacherDaoImpl implements TeacherDao {
 	            System.out.println(preparedStatement);
 	            ResultSet rs = preparedStatement.executeQuery();
 	            while (rs.next()) {
-	                String firstName = rs.getString("first_name");
-	                String lastName = rs.getString("last_name");
+	                String firstName = rs.getString("firstName");
+	                String lastName = rs.getString("lastName");
 	                String subject = rs.getString("subject");
 	                String email = rs.getString("email");
 	                String username = rs.getString("username");
@@ -73,8 +73,8 @@ public class TeacherDaoImpl implements TeacherDao {
 	            ResultSet rs = preparedStatement.executeQuery();
 	            while (rs.next()) {
 	                int id = rs.getInt("id");
-	                String firstName = rs.getString("first_name");
-	                String lastName = rs.getString("last_name");
+	                String firstName = rs.getString("firstName");
+	                String lastName = rs.getString("lastName");
 	                String subject = rs.getString("subject");
 	                String email = rs.getString("email");
 	                String username = rs.getString("username");
