@@ -13,12 +13,13 @@ import com.ilyass.school.utils.JDBCUtils;
 public class TeacherDaoImpl implements TeacherDao {
 
 	private static final String INSERT_TEACHER_SQL = "INSERT INTO teacher" +
-	        "  (firsName, lastName, subject, email, username, password) VALUES " + " (?, ?, ?, ?, ?, ?);";
+	        "  (firstName, lastName, subject, email, username, password) VALUES " + " (?, ?, ?, ?, ?, ?);";
 
-	    private static final String SELECT_TEACHER_BY_ID = "SELECT * FROM teacher WHERE id = ?";
-	    private static final String SELECT_ALL_TEACHERS = "SELECT * FROM teacher";
-	    private static final String DELETE_TEACHER_BY_ID = "DELETE FROM teacher WHERE id = ?";
-	    private static final String UPDATE_TEACHER = "UPDATE teacher SET firstName = ?, lastName = ?, subject = ?, email = ?, username = ?, password = ? WHERE id = ?";
+	private static final String SELECT_TEACHER_BY_ID = "SELECT * FROM teacher WHERE id = ?";
+	private static final String SELECT_ALL_TEACHERS = "SELECT * FROM teacher";
+	private static final String DELETE_TEACHER_BY_ID = "DELETE FROM teacher WHERE id = ?";
+	private static final String UPDATE_TEACHER = "UPDATE teacher SET firstName = ?, lastName = ?, subject = ?, email = ?, username = ?, password = ? WHERE id = ?";
+
 
 	    public TeacherDaoImpl() {
 	    }
@@ -36,6 +37,14 @@ public class TeacherDaoImpl implements TeacherDao {
 	            preparedStatement.setString(6, teacher.getPassword());
 	            System.out.println(preparedStatement);
 	            preparedStatement.executeUpdate();
+	            
+	         // Retrieve the auto-generated id
+	            ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
+	            if (generatedKeys.next()) {
+	                int id = generatedKeys.getInt(1);
+	                teacher.setId(id);
+	            }
+	            
 	        } catch (SQLException exception) {
 	            JDBCUtils.printSQLException(exception);
 	        }
