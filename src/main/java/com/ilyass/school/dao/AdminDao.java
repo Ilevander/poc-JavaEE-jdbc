@@ -10,7 +10,7 @@ import com.ilyass.school.utils.JDBCUtils;
 public class AdminDao {
 
     public int registerAdmin(Admin admin) throws ClassNotFoundException {
-        String INSERT_ADMINS_SQL = "INSERT INTO admins" +
+        String INSERT_ADMINS_SQL = "INSERT INTO admin" +
             "  (username, password) VALUES " +
             " (?, ?);";
 
