@@ -101,26 +101,26 @@ public class StudentController extends HttpServlet {
         response.sendRedirect("list");
     }
 
-    private void updateTeacher(HttpServletRequest request, HttpServletResponse response)
+    private void updateStudent(HttpServletRequest request, HttpServletResponse response)
     throws SQLException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
-        String subject = request.getParameter("subject");
+        String age = request.getParameter("age");
         String email = request.getParameter("email");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        Teacher updateTeacher = new Teacher(id, firstName, lastName, subject, email, username, password);
-        teacherDao.updateTeacher(updateTeacher);
+        Student updateStudent = new Student(id, firstName, lastName, age, email, username, password);
+        studentdao.updateStudent(updateStudent);
 
         response.sendRedirect("list");
     }
 
-    private void deleteTeacher(HttpServletRequest request, HttpServletResponse response)
+    private void deleteStudent(HttpServletRequest request, HttpServletResponse response)
     throws SQLException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        teacherDao.deleteTeacher(id);
+        studentdao.deleteStudent(id);
 
         response.sendRedirect("list");
     }
