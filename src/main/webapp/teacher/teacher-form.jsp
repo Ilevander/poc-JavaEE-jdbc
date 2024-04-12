@@ -12,17 +12,17 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: tomato">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #007F73;">
         <div>
-            <a href="https://www.javaguides.net" class="navbar-brand"> School Management</a>
+            <a href="https://www.javaguides.net" class="navbar-brand">School Management POC</a>
         </div>
 
         <ul class="navbar-nav">
-            <li><a href="<%=request.getContextPath()%>/list" class="nav-link">Teachers</a></li>
+            <li><a href="<%=request.getContextPath()%>/list" class="nav-link" style="color: #FFC700;">Teachers</a></li>
         </ul>
 
         <ul class="navbar-nav navbar-collapse justify-content-end">
-            <li><a href="<%=request.getContextPath()%>/logout" class="nav-link">Logout</a></li>
+            <li><a href="<%=request.getContextPath()%>/logout" class="nav-link" style="color: #FFC700;">Logout</a></li>
         </ul>
     </nav>
 </header>

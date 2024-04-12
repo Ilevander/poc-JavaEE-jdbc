@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #007F73;">
         <div>
-            <a href="https://www.javaguides.net" class="navbar-brand">School Management POC</a>
+            <a href="#" class="navbar-brand">School Management POC</a>
         </div>
 
         <ul class="navbar-nav navbar-collapse justify-content-end">
