@@ -79,6 +79,7 @@ public class TeacherDaoImpl implements TeacherDao {
 	        try (Connection connection = JDBCUtils.getConnection();
 	             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_TEACHERS)) {
 	            System.out.println(preparedStatement);
+	            System.out.println("toto");
 	            ResultSet rs = preparedStatement.executeQuery();
 	            while (rs.next()) {
 	                int id = rs.getInt("id");
@@ -90,6 +91,7 @@ public class TeacherDaoImpl implements TeacherDao {
 	                String password = rs.getString("password");
 	                teachers.add(new Teacher(id, firstName, lastName, subject, email, username, password));
 	            }
+	            System.out.println("done");
 	        } catch (SQLException exception) {
 	            JDBCUtils.printSQLException(exception);
 	        }
