@@ -62,8 +62,8 @@
             </fieldset>
 
             <fieldset class="form-group">
-                <label style="color: #007F73;">Subject</label>
-                <input type="text" value="<c:out value='${student.subject}' />" class="form-control" name="subject" required="required">
+                <label style="color: #007F73;">Age</label>
+                <input type="text" value="<c:out value='${student.age}' />" class="form-control" name="age" required="required">
             </fieldset>
 
             <fieldset class="form-group">
