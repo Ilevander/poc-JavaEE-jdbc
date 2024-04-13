@@ -15,7 +15,7 @@ import com.ilyass.school.dao.StudentDao;
 import com.ilyass.school.dao.StudentDaoImpl;
 import com.ilyass.school.model.Student;
 
-@WebServlet("/")
+@WebServlet("/student-home")
 public class StudentController extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private StudentDao studentdao;
@@ -63,7 +63,7 @@ public class StudentController extends HttpServlet {
         }
     }
 
-    private void listStudents(HttpServletRequest request, HttpServletResponse response)
+    private void listStudent(HttpServletRequest request, HttpServletResponse response)
     throws SQLException, IOException, ServletException {
         List<Student> listStudents = studentdao.selectAllStudents();
         request.setAttribute("listStudents", listStudents);
@@ -90,7 +90,7 @@ public class StudentController extends HttpServlet {
     throws SQLException, IOException {
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
-        String age = request.getParameter("age");
+        int age = Integer.parseInt(request.getParameter("age"));
         String email = request.getParameter("email");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
@@ -106,7 +106,7 @@ public class StudentController extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
-        String age = request.getParameter("age");
+        int age = Integer.parseInt(request.getParameter("age"));
         String email = request.getParameter("email");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
