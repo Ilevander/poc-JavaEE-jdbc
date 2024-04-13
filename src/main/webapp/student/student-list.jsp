@@ -17,7 +17,7 @@
         </div>
 
         <ul class="navbar-nav">
-            <li><a href="<%=request.getContextPath()%>/list" class="nav-link" style="color: #FFC700;">Teachers</a></li>
+            <li><a href="<%=request.getContextPath()%>/list" class="nav-link" style="color: #FFC700;">Students</a></li>
         </ul>
 
         <ul class="navbar-nav navbar-collapse justify-content-end">
@@ -29,10 +29,10 @@
 
 <div class="row">
     <div class="container">
-        <h3 class="text-center" style="color: #007F73;">List of Teachers</h3>
+        <h3 class="text-center" style="color: #007F73;">List of Students</h3>
         <hr style="border-color: #4CCD99;">
         <div class="container text-left">
-            <a href="<%=request.getContextPath()%>/new" class="btn btn-success" style="background-color: #FFC700; border-color: #007F73; color: #007F73;">Add Teacher</a>
+            <a href="<%=request.getContextPath()%>/new" class="btn btn-success" style="background-color: #FFC700; border-color: #007F73; color: #007F73;">Add Student</a>
         </div>
         <br>
         <table class="table table-bordered" style="border-color: #4CCD99;">
@@ -46,16 +46,16 @@
                 </tr>
             </thead>
             <tbody>
-                <c:forEach var="teacher" items="${listTeachers}">
+                <c:forEach var="student" items="${listStudents}">
                     <tr>
-                        <td style="color: #007F73;"><c:out value="${teacher.firstName}" /></td>
-                        <td style="color: #007F73;"><c:out value="${teacher.lastName}" /></td>
-                        <td style="color: #007F73;"><c:out value="${teacher.subject}" /></td>
-                        <td style="color: #007F73;"><c:out value="${teacher.email}" /></td>
+                        <td style="color: #007F73;"><c:out value="${student.firstName}" /></td>
+                        <td style="color: #007F73;"><c:out value="${student.lastName}" /></td>
+                        <td style="color: #007F73;"><c:out value="${student.subject}" /></td>
+                        <td style="color: #007F73;"><c:out value="${student.email}" /></td>
                         <td>
-                            <a href="edit?id=<c:out value='${teacher.id}' />" class="btn btn-warning" style="background-color: #FFC700; border-color: #007F73; color: #007F73;">Edit</a>
+                            <a href="edit?id=<c:out value='${student.id}' />" class="btn btn-warning" style="background-color: #FFC700; border-color: #007F73; color: #007F73;">Edit</a>
 							&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="delete?id=<c:out value='${teacher.id}' />" class="btn btn-danger" style="background-color: #FFF455; border-color: #007F73; color: #007F73;">Delete</a>
+							<a href="delete?id=<c:out value='${student.id}' />" class="btn btn-danger" style="background-color: #FFF455; border-color: #007F73; color: #007F73;">Delete</a>
 
                         </td>
                     </tr>
