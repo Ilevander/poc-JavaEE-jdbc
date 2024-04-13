@@ -40,7 +40,7 @@
                 <tr style="background-color: #4CCD99; color: #FFF455;">
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Subject</th>
+                    <th>Age</th>
                     <th>Email</th>
                     <th>Actions</th>
                 </tr>
@@ -50,7 +50,7 @@
                     <tr>
                         <td style="color: #007F73;"><c:out value="${student.firstName}" /></td>
                         <td style="color: #007F73;"><c:out value="${student.lastName}" /></td>
-                        <td style="color: #007F73;"><c:out value="${student.subject}" /></td>
+                        <td style="color: #007F73;"><c:out value="${student.age}" /></td>
                         <td style="color: #007F73;"><c:out value="${student.email}" /></td>
                         <td>
                             <a href="edit?id=<c:out value='${student.id}' />" class="btn btn-warning" style="background-color: #FFC700; border-color: #007F73; color: #007F73;">Edit</a>
